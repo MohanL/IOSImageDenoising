@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rAH-e3-fKq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Sw View Controller-->
+        <!--FIrst Scene-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SwViewController" customModule="SwiftStitch" sceneMemberID="viewController">
+                <viewController title="FIrst Scene" id="BYZ-38-t0r" customClass="SwViewController" customModule="SwiftStitch" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,25 +16,113 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="373" affinity="minY"/>
+                            <userLayoutGuide location="287" affinity="minY"/>
+                            <userLayoutGuide location="390" affinity="minY"/>
+                            <userLayoutGuide location="390" affinity="minY"/>
+                            <userLayoutGuide location="362" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="400" affinity="minY"/>
+                            <userLayoutGuide location="400" affinity="minY"/>
+                        </userGuides>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-XX-KE7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-XX-KE7">
+                                <rect key="frame" x="0.0" y="-15" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="300" width="375" height="256"/>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="89" y="121" width="197" height="241"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="61" y="115" width="212" height="445"/>
+                                </variation>
                             </scrollView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-ht-xfb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-Sn-M5v">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="remove">
+                                    <color key="titleShadowColor" red="1" green="0.049116724539999997" blue="0.24385420429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="109" y="72" width="51" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="64" width="147" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="remove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uhz-xk-Q0W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stj-vW-Rt2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="pick"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="64" width="66" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhf-4s-ty3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLs-mr-CGl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="process"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="186" y="59" width="73" height="56"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="51" width="73" height="56"/>
+                                </variation>
+                                <connections>
+                                    <action selector="process:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgs-ji-0yH"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-ht-xfb">
                                 <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.049116724539999997" blue="0.24385420429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="211" y="70" width="37" height="37"/>
+                                </variation>
                             </activityIndicatorView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UvU-XX-KE7" secondAttribute="bottom" id="8Hf-lt-uot"/>
                             <constraint firstItem="UvU-XX-KE7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EbT-43-RTy"/>
                             <constraint firstItem="UvU-XX-KE7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dex-vL-KbJ"/>
-                            <constraint firstAttribute="centerX" secondItem="3AV-ht-xfb" secondAttribute="centerX" id="lbN-sm-0JA"/>
-                            <constraint firstAttribute="centerY" secondItem="3AV-ht-xfb" secondAttribute="centerY" id="oi5-Wh-C2H"/>
                             <constraint firstAttribute="trailing" secondItem="UvU-XX-KE7" secondAttribute="trailing" id="t8e-J0-zvh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dkg-Sn-M5v"/>
+                                <exclude reference="Stj-vW-Rt2"/>
+                                <exclude reference="mLs-mr-CGl"/>
+                                <exclude reference="3AV-ht-xfb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dkg-Sn-M5v"/>
+                                <include reference="mLs-mr-CGl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Stj-vW-Rt2"/>
+                                <include reference="3AV-ht-xfb"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="fwy-EE-sbP"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="UvU-XX-KE7" id="IZj-JX-Ff4"/>
                         <outlet property="spinner" destination="3AV-ht-xfb" id="379-eg-8QM"/>
@@ -41,6 +130,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="967.5" y="163.5"/>
+        </scene>
+        <!--Secondviewcontroller-->
+        <scene sceneID="3Ni-Y5-evt">
+            <objects>
+                <viewController id="oMe-a5-SLZ" customClass="secondviewcontroller" customModule="SwiftStitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yvh-vt-gaf"/>
+                        <viewControllerLayoutGuide type="bottom" id="QM7-bC-vcz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KLH-LH-WDD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bm-7Y-oD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="163.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WTE-B8-Rl6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rAH-e3-fKq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xxX-c3-3Nd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nYO-aB-HnI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7h-Qy-oYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="163.5"/>
         </scene>
     </scenes>
 </document>

@@ -73,7 +73,6 @@
     
     return cvMat;
 }
-
 + (UIImage *)imageWithCVMat:(const cv::Mat&)cvMat
 {
     return [[UIImage alloc] initWithCVMat:cvMat];

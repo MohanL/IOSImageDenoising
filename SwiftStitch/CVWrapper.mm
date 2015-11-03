@@ -28,7 +28,7 @@
 }
 
 + (UIImage*) processWithArray:(NSArray*)imageArray
-{
+{ 
     if ([imageArray count]==0){
         NSLog (@"imageArray is empty");
         return 0;
