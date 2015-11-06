@@ -1,7 +1,7 @@
 __OpenCV computer vision with iOS: stitching panoramas & image denosing__  
 
 <img src = "https://github.com/foundry/OpenCVSwiftStitch/blob/meta/meta/example.big.jpg">
-<img src = "https://github.com/MohanL/IOSImageDenoising/res/intro.jpg">
+<img src = "https://raw.githubusercontent.com/MohanL/IOSImageDenoising/master/res/intro.png">
 v2 demonstrates how to mix Swift, Objective-C and C++ in one project whilst keeping the code clearly separate. 
 
 The project AppDelegate and View Controller are written in Swift. Swift cannot talk directly to C++ (which we need for OpenCV), so we provide an Objective-C++ wrapper class to mediate between Swift and C++. We also provide an Objective-C++ category on UIImage to mediate between UIImage and CV::Mat image formats. The CVWrapper header file is pure Objective-C. For [v1](https://github.com/foundry/OpenCVStitch)(which doesn't use Swift) this separation was a matter of clean style. For v2, it is a requirement: if any C++ headers are included in the wrapper, the app will not compile (Swift won't like it).
