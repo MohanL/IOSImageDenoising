@@ -1,23 +1,12 @@
-__OpenCV computer vision with iOS: stitching panoramas__  
+__OpenCV computer vision with iOS: stitching panoramas & image denosing__  
 
 <img src = "https://github.com/foundry/OpenCVSwiftStitch/blob/meta/meta/example.big.jpg">
-
-Version 2.1 of [OpenCVStitch](http://github.com/foundry/OpenCVStitch)
-
-This project was created to a answer a couple of Stack Overflow questions:  
-[libraries to CAPTURE panorama in iOS](http://stackoverflow.com/q/14062932/1375695)  
-[Can I mix Swift with C++? Like the Objective - C .mm files](http://stackoverflow.com/q/24042774/1375695)    
-
+<img src = "https://github.com/MohanL/IOSImageDenoising/res/intro.jpg">
 v2 demonstrates how to mix Swift, Objective-C and C++ in one project whilst keeping the code clearly separate. 
 
 The project AppDelegate and View Controller are written in Swift. Swift cannot talk directly to C++ (which we need for OpenCV), so we provide an Objective-C++ wrapper class to mediate between Swift and C++. We also provide an Objective-C++ category on UIImage to mediate between UIImage and CV::Mat image formats. The CVWrapper header file is pure Objective-C. For [v1](https://github.com/foundry/OpenCVStitch)(which doesn't use Swift) this separation was a matter of clean style. For v2, it is a requirement: if any C++ headers are included in the wrapper, the app will not compile (Swift won't like it).
 
-__Installation__  
-To run the project you need to install the OpenCV framework:    
-v3.0.0: available from [opencv.org](http://opencv.org)  
-v2.4.9: installed via cocoaPods
-
-v3.0.0: download the framework and drag it to your project.  
+v3.0.0(default): download the framework and drag it to your project.  
 Include it in the _Link Binary With Libraries_ section of Build Phases for the target.  
 Change the `#include` line for 3.0 compatibility as indicated in `stitching.cpp`  
 
@@ -28,9 +17,10 @@ OpenCVStitch is a very simple iOS/openCV example showing basic use of the Stitch
 
 The app has almost no user interface. On launch, the stitching code operates on four sample images, displaying the result in a UIScrollView.
 
+__Algorithm Resource__
+http://personal.ie.cuhk.edu.hk/~lz013/projects/BurstDenoising.html
+
 __OpenCVStitch Versions__   
-
-
 
 [Version 2.1](https://github.com/foundry/OpenCVSwiftStitch)   
 Swift / Objective-C / C++   
@@ -41,8 +31,6 @@ Tested with XCode 6.4 / Swift 1.2 for iOS 7.0+
 [Version 1.0](https://github.com/foundry/OpenCVStitch)  
 Objective-C / C++   
 Tested with XCode 4.5.2 -> 6.3 for iOS 5.1 upwards   
-
-Provides a partial answer to: [Libraries to capture panoramas in iOS 6](http://stackoverflow.com/questions/14062932/libraries-to-capture-panorama-in-ios-6/14064788#14064788) (Stack Overflow)
 
 __OpenCV Versions__  
 _OpenCV 3.x_   
@@ -87,3 +75,5 @@ __Comparisons__
 
 </td>
 </tr></table>
+
+
