@@ -79,16 +79,13 @@ class SwViewController: UIViewController, UIScrollViewDelegate,UIImagePickerCont
     }
     func stitch() {
         self.spinner.startAnimating()
-        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             
             if(!self.UIImagearray.isEmpty)
             {
                 let imageArray:[UIImage!] = self.UIImagearray
-               
                 let stitchedImage:UIImage = CVWrapper.processWithArray(imageArray) as UIImage
                 // dispatch
-                
                 dispatch_async(dispatch_get_main_queue()) {
                     NSLog("stichedImage %@", stitchedImage)
                     let imageView:UIImageView = UIImageView.init(image: stitchedImage)

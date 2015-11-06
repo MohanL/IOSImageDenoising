@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="373" affinity="minY"/>
-                            <userLayoutGuide location="287" affinity="minY"/>
+                            <userLayoutGuide location="390" affinity="minY"/>
+                            <userLayoutGuide location="390" affinity="minY"/>
                             <userLayoutGuide location="390" affinity="minY"/>
                             <userLayoutGuide location="390" affinity="minY"/>
                             <userLayoutGuide location="362" affinity="minY"/>
@@ -30,8 +30,19 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-XX-KE7">
                                 <rect key="frame" x="0.0" y="-15" width="600" height="600"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-ht-xfb">
+                                        <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                        <animations/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="3AV-ht-xfb"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="0.0" y="300" width="375" height="256"/>
                                 </variation>
@@ -39,7 +50,7 @@
                                     <rect key="frame" x="89" y="121" width="197" height="241"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="61" y="115" width="212" height="445"/>
+                                    <rect key="frame" x="-12" y="98" width="400" height="800"/>
                                 </variation>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-Sn-M5v">
@@ -83,14 +94,6 @@
                                     <action selector="process:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgs-ji-0yH"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-ht-xfb">
-                                <rect key="frame" x="282" y="282" width="37" height="37"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.049116724539999997" blue="0.24385420429999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="211" y="70" width="37" height="37"/>
-                                </variation>
-                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -105,7 +108,6 @@
                                 <exclude reference="dkg-Sn-M5v"/>
                                 <exclude reference="Stj-vW-Rt2"/>
                                 <exclude reference="mLs-mr-CGl"/>
-                                <exclude reference="3AV-ht-xfb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -117,12 +119,10 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Stj-vW-Rt2"/>
-                                <include reference="3AV-ht-xfb"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="fwy-EE-sbP"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="UvU-XX-KE7" id="IZj-JX-Ff4"/>
                         <outlet property="spinner" destination="3AV-ht-xfb" id="379-eg-8QM"/>
